@@ -1,0 +1,10 @@
+<h1>This Website from the 90s helps you to create Todo Tasks</h1>
+
+<ul>
+  <% @tasks.each do |t| %>
+  <li><%= link_to t.title, task_path(t)%></li>
+  <p><%= t.completed %></p>
+  <% end %>
+</ul>
+
+<%= link_to "new", new_task_path %>
